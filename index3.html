@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>carmona perez marino — arquitectura</title>
+  <link rel="stylesheet" href="css/styles3.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div id="cursor"></div>
+  <div id="cursor-label">
+    <span class="label-name"></span>
+    <span class="label-cat"></span>
+  </div>
+
+  <!-- Fixed nav -->
+  <nav id="nav">
+    <a href="#" class="wordmark" onclick="goToSlide(0); return false;">
+      <span class="studio-name">carmona perez marino</span>
+      <span class="studio-sub">arquitectura</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" onclick="goToSlide(1); return false;">proyectos</a>
+      <a href="#" onclick="goToSlide(11); return false;">contacto</a>
+    </div>
+  </nav>
+
+  <!-- Slider container -->
+  <div id="slider">
+
+    <!-- SLIDE 0: Hero -->
+    <section class="slide slide--hero" data-index="0">
+      <span class="hero-year">mmxxv</span>
+      <p class="hero-tagline">
+        diseñamos el espacio<br>
+        que se <em>habita</em> antes<br>
+        de construirlo.
+      </p>
+      <div class="hero-scroll-hint">
+        <span class="arrow-line"></span>
+        <span>proyectos</span>
+      </div>
+    </section>
+
+    <!-- SLIDE 1: Varese 2 -->
+    <section class="slide slide--project" data-index="1" data-name="Varese 2" data-cat="obra nueva">
+      <div class="project-meta">
+        <div class="proj-number">01</div>
+        <div class="proj-name">Varese 2</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">obra nueva</div>
+        <div class="proj-year">2024</div>
+      </div>
+      <div class="project-photo" data-name="Varese 2" data-cat="obra nueva">
+        <img src="img/obra-varese2.jpg" alt="Varese 2" loading="eager" />
+      </div>
+    </section>
+
+    <!-- SLIDE 2: Casa Vidrio nocturna -->
+    <section class="slide slide--project" data-index="2" data-name="Casa Vidrio" data-cat="obra nueva">
+      <div class="project-meta">
+        <div class="proj-number">02</div>
+        <div class="proj-name">Casa Vidrio</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">obra nueva</div>
+        <div class="proj-year">2024</div>
+      </div>
+      <div class="project-photo" data-name="Casa Vidrio" data-cat="obra nueva">
+        <img src="img/obra-casavidrio-noche.jpg" alt="Casa Vidrio noche" loading="eager" />
+      </div>
+    </section>
+
+    <!-- SLIDE 3: Casa Vidrio deck -->
+    <section class="slide slide--project" data-index="3" data-name="Casa Vidrio — deck" data-cat="obra nueva">
+      <div class="project-meta">
+        <div class="proj-number">03</div>
+        <div class="proj-name">Casa Vidrio<br><span style="font-size:0.7em; opacity:0.5;">deck exterior</span></div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">obra nueva</div>
+        <div class="proj-year">2024</div>
+      </div>
+      <div class="project-photo" data-name="Casa Vidrio — deck" data-cat="obra nueva">
+        <img src="img/obra-casavidrio-deck.jpg" alt="Casa Vidrio deck" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 4: Cuatro Vientos -->
+    <section class="slide slide--project" data-index="4" data-name="Casa Cuatro Vientos" data-cat="obra nueva">
+      <div class="project-meta">
+        <div class="proj-number">04</div>
+        <div class="proj-name">Casa Cuatro<br>Vientos</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">obra nueva</div>
+        <div class="proj-year">2023</div>
+      </div>
+      <div class="project-photo" data-name="Casa Cuatro Vientos" data-cat="obra nueva">
+        <img src="img/obra-cuatrovientos.jpg" alt="Casa Cuatro Vientos" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 5: Ventana noche -->
+    <section class="slide slide--project" data-index="5" data-name="Ventana — nocturna" data-cat="obra nueva">
+      <div class="project-meta">
+        <div class="proj-number">05</div>
+        <div class="proj-name">Ventana<br><span style="font-size:0.7em; opacity:0.5;">nocturna</span></div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">obra nueva</div>
+        <div class="proj-year">2023</div>
+      </div>
+      <div class="project-photo" data-name="Ventana — nocturna" data-cat="obra nueva">
+        <img src="img/obra-ventana-noche.jpg" alt="Ventana noche" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 6: Rediseño Oficinas -->
+    <section class="slide slide--project" data-index="6" data-name="Rediseño Oficinas" data-cat="remodelación">
+      <div class="project-meta">
+        <div class="proj-number">06</div>
+        <div class="proj-name">Rediseño<br>Oficinas</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">remodelación</div>
+        <div class="proj-year">2024</div>
+      </div>
+      <div class="project-photo" data-name="Rediseño Oficinas" data-cat="remodelación">
+        <img src="img/remo-oficinas.jpg" alt="Rediseño Oficinas" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 7: Break Café -->
+    <section class="slide slide--project" data-index="7" data-name="Break Café" data-cat="remodelación">
+      <div class="project-meta">
+        <div class="proj-number">07</div>
+        <div class="proj-name">Break Café</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">remodelación</div>
+        <div class="proj-year">2023</div>
+      </div>
+      <div class="project-photo" data-name="Break Café" data-cat="remodelación">
+        <img src="img/remo-break.jpg" alt="Break Café" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 8: Estudio CPM -->
+    <section class="slide slide--project" data-index="8" data-name="Estudio CPM" data-cat="interiorismo">
+      <div class="project-meta">
+        <div class="proj-number">08</div>
+        <div class="proj-name">Estudio CPM</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">interiorismo</div>
+        <div class="proj-year">2024</div>
+      </div>
+      <div class="project-photo" data-name="Estudio CPM" data-cat="interiorismo">
+        <img src="img/int-estudio.jpg" alt="Estudio CPM" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 9: Corredor luz -->
+    <section class="slide slide--project" data-index="9" data-name="Corredor Luz" data-cat="interiorismo">
+      <div class="project-meta">
+        <div class="proj-number">09</div>
+        <div class="proj-name">Corredor<br>Luz</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">interiorismo</div>
+        <div class="proj-year">2023</div>
+      </div>
+      <div class="project-photo" data-name="Corredor Luz" data-cat="interiorismo">
+        <img src="img/int-corredor.jpg" alt="Corredor luz" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 10: Galería rural -->
+    <section class="slide slide--project" data-index="10" data-name="Galería Rural" data-cat="interiorismo">
+      <div class="project-meta">
+        <div class="proj-number">10</div>
+        <div class="proj-name">Galería<br>Rural</div>
+        <div class="proj-divider"></div>
+        <div class="proj-cat">interiorismo</div>
+        <div class="proj-year">2023</div>
+      </div>
+      <div class="project-photo" data-name="Galería Rural" data-cat="interiorismo">
+        <img src="img/int-galeria.jpg" alt="Galería rural" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- SLIDE 11: Contacto -->
+    <section class="slide slide--contact" data-index="11">
+      <span class="contact-year-stamp">carmona perez marino — mmxxv</span>
+      <h2 class="contact-headline">hagamos<br>un <span>lugar.</span></h2>
+      <div class="contact-links">
+        <div class="contact-link-item">
+          <span class="cl-label">email</span>
+          <a href="mailto:estudio@carmonaperezmarino.com">estudio@carmonaperezmarino.com</a>
+        </div>
+        <div class="contact-link-item">
+          <span class="cl-label">instagram</span>
+          <a href="https://instagram.com/carmonaperezmarino" target="_blank">@carmonaperezmarino</a>
+        </div>
+        <div class="contact-link-item">
+          <span class="cl-label">ubicación</span>
+          <a href="#">mar del plata, argentina</a>
+        </div>
+      </div>
+    </section>
+
+  </div><!-- /slider -->
+
+  <!-- Progress dots -->
+  <div id="progress"></div>
+
+  <!-- Slide counter -->
+  <div id="slide-counter">
+    <span class="current">01</span>&thinsp;/&thinsp;<span id="total-slides">12</span>
+  </div>
+
+  <script>
+  (function() {
+    'use strict';
+
+    /* ---- Elements ---- */
+    const slider     = document.getElementById('slider');
+    const cursor     = document.getElementById('cursor');
+    const cursorLbl  = document.getElementById('cursor-label');
+    const lblName    = cursorLbl.querySelector('.label-name');
+    const lblCat     = cursorLbl.querySelector('.label-cat');
+    const progressEl = document.getElementById('progress');
+    const counterEl  = document.querySelector('#slide-counter .current');
+
+    const slides     = Array.from(slider.querySelectorAll('.slide'));
+    const TOTAL      = slides.length;
+
+    /* ---- Build progress dots ---- */
+    document.getElementById('total-slides').textContent =
+      String(TOTAL).padStart(2, '0');
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement('div');
+      dot.className = 'progress-dot' + (i === 0 ? ' active' : '');
+      dot.addEventListener('click', () => goToSlide(i));
+      progressEl.appendChild(dot);
+    });
+
+    function updateProgress(index) {
+      const dots = progressEl.querySelectorAll('.progress-dot');
+      dots.forEach(function(d, i) { d.classList.toggle('active', i === index); });
+      counterEl.textContent = String(index + 1).padStart(2, '0');
+    }
+
+    /* ---- goToSlide ---- */
+    function goToSlide(index) {
+      currentSlide = Math.max(0, Math.min(TOTAL - 1, index));
+      targetX = currentSlide * window.innerWidth;
+      if (!rafId) rafId = requestAnimationFrame(rafLoop);
+      updateProgress(currentSlide);
+    }
+    window.goToSlide = goToSlide;
+
+    /* ---- Wheel → scroll progresivo con snap al soltar ---- */
+    let currentSlide = 0;
+    let targetX      = 0;
+    let rafId        = null;
+    let idleTimer    = null;
+
+    function rafLoop() {
+      const diff = targetX - slider.scrollLeft;
+      if (Math.abs(diff) < 0.6) {
+        slider.scrollLeft = targetX;
+        rafId = null;
+        return;
+      }
+      slider.scrollLeft += diff * 0.09;   /* 0.09 = progresivo pero con peso */
+      rafId = requestAnimationFrame(rafLoop);
+    }
+
+    function snapNearest() {
+      const nearest = Math.round(slider.scrollLeft / window.innerWidth);
+      currentSlide  = Math.max(0, Math.min(TOTAL - 1, nearest));
+      targetX       = currentSlide * window.innerWidth;
+      if (!rafId) rafId = requestAnimationFrame(rafLoop);
+      updateProgress(currentSlide);
+    }
+
+    window.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      /* multiplier 2.2: sensación de control sin que vuele */
+      targetX = Math.max(0, Math.min((TOTAL - 1) * window.innerWidth,
+                targetX + e.deltaY * 2.2));
+
+      if (!rafId) rafId = requestAnimationFrame(rafLoop);
+
+      /* snap al nearest cuando el usuario para de scrollear */
+      clearTimeout(idleTimer);
+      idleTimer = setTimeout(snapNearest, 180);
+    }, { passive: false });
+
+    /* ---- Keyboard navigation ---- */
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') {
+        e.preventDefault(); goToSlide(currentSlide + 1);
+      } else if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') {
+        e.preventDefault(); goToSlide(currentSlide - 1);
+      }
+    });
+
+    /* ---- Hide cursor label when leaving window (noop, cursor es del sistema) ---- */
+    document.addEventListener('mouseleave', function() {
+    });
+    document.addEventListener('mouseenter', function() {
+      cursor.style.opacity = '1';
+    });
+
+    /* ---- Touch/trackpad: allow native horizontal scroll to sync targetScroll ---- */
+    slider.addEventListener('scroll', function() {
+      targetScroll = slider.scrollLeft;
+    }, { passive: true });
+
+  })();
+  </script>
+
+</body>
+</html>

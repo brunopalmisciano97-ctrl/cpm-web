@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>carmona perez marino · arquitectura</title>
+  <meta name="description" content="carmona perez marino — estudio de arquitectura. Obra nueva, remodelación e interiorismo. Espacios que se habitan antes de construirse." />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Custom cursor label (desktop) -->
+  <div class="cursor-label" id="cursorLabel" aria-hidden="true"></div>
+
+  <!-- ░░░ HEADER ░░░ -->
+  <header class="site-header" id="header">
+    <a href="#inicio" class="brand" aria-label="carmona perez marino — inicio">
+      <span class="brand__name">carmona<br />perez marino</span>
+      <span class="brand__sub">arquitectura</span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#obras">Obras</a>
+      <a href="#estudio">Estudio</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header__right">
+      <button class="lang" id="langToggle" aria-label="Cambiar idioma">ES<span>/</span>EN</button>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ░░░ HERO / MANIFIESTO ░░░ -->
+  <section class="hero" id="inicio">
+    <!-- Plan-line motif (signature) -->
+    <svg class="hero__plan" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+      <g class="plan-lines" fill="none" stroke="currentColor" stroke-width="1">
+        <path d="M0 180 H1440" />
+        <path d="M0 720 H1440" />
+        <path d="M360 0 V900" />
+        <path d="M1080 0 V900" />
+        <rect x="360" y="180" width="720" height="540" />
+        <path d="M360 450 H1080" />
+        <path d="M720 180 V720" />
+        <circle cx="360" cy="180" r="46" />
+        <path d="M1080 720 L1180 620" />
+      </g>
+    </svg>
+
+    <div class="hero__inner">
+      <p class="hero__eyebrow reveal">estudio de arquitectura · argentina</p>
+      <h1 class="hero__statement">
+        <span class="reveal" style="--d:0">diseñamos</span>
+        <span class="reveal" style="--d:1">el espacio</span>
+        <span class="reveal" style="--d:2"><em>que se habita</em></span>
+        <span class="reveal" style="--d:3">antes de construirlo.</span>
+      </h1>
+      <div class="hero__foot reveal" style="--d:4">
+        <span>carmona · perez · marino</span>
+        <a href="#obras" class="scroll-cue">ver obras <span class="scroll-cue__line"></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ OBRAS ░░░ -->
+  <section class="works" id="obras">
+    <div class="works__inner">
+
+      <!-- Panel izquierdo: lista de proyectos -->
+      <div class="works__list-col">
+        <div class="section-head section-head--inline">
+          <span class="section-head__num">01</span>
+          <h2 class="section-head__title">obras</h2>
+        </div>
+
+        <div class="filters" id="filters">
+          <button class="filter is-active" data-filter="all">Todo</button>
+          <button class="filter" data-filter="obra-nueva">Obra nueva</button>
+          <button class="filter" data-filter="remodelacion">Remodelación</button>
+          <button class="filter" data-filter="interiorismo">Interiorismo</button>
+        </div>
+
+        <ol class="proj-list" id="projList">
+          <!-- inyectado por JS -->
+        </ol>
+      </div>
+
+      <!-- Panel derecho: imagen activa -->
+      <div class="works__image-col">
+        <div class="works__img-wrap">
+          <img class="works__active-img" id="activeImg" src="" alt="" />
+        </div>
+        <p class="works__img-caption" id="activeCaption"></p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ░░░ ESTUDIO ░░░ -->
+  <section class="studio" id="estudio">
+    <div class="section-head">
+      <span class="section-head__num">02</span>
+      <h2 class="section-head__title">estudio</h2>
+    </div>
+
+    <div class="studio__manifesto reveal">
+      <p>
+        carmona perez marino nace del encuentro de tres miradas sobre una misma idea: que la
+        arquitectura no se trata de objetos, sino de la vida que ocurre dentro de ellos.
+      </p>
+      <p>
+        Trabajamos desde el detalle hasta el territorio. Nos interesan los materiales nobles, la luz
+        natural como material de proyecto y los espacios que envejecen bien. Cada encargo empieza con
+        una pregunta antes que con una forma.
+      </p>
+    </div>
+
+    <div class="team">
+      <article class="member reveal">
+        <div class="member__photo" data-img="https://picsum.photos/id/1005/600/720?grayscale"></div>
+        <h3>— carmona</h3>
+        <p>Arquitecto. Dirección de proyecto y obra.</p>
+      </article>
+      <article class="member reveal" style="--d:1">
+        <div class="member__photo" data-img="https://picsum.photos/id/1011/600/720?grayscale"></div>
+        <h3>— perez</h3>
+        <p>Arquitecta. Diseño e interiorismo.</p>
+      </article>
+      <article class="member reveal" style="--d:2">
+        <div class="member__photo" data-img="https://picsum.photos/id/1027/600/720?grayscale"></div>
+        <h3>— marino</h3>
+        <p>Arquitecto. Urbanismo y paisaje.</p>
+      </article>
+    </div>
+
+    <ul class="credits">
+      <li><span>Premio</span> Bienal de Arquitectura · Mención 2024</li>
+      <li><span>Publicación</span> Summa+ · ARQ Clarín · PLOT</li>
+      <li><span>Docencia</span> Taller de Proyecto, FADU</li>
+      <li><span>Desde</span> 2016 · Buenos Aires</li>
+    </ul>
+  </section>
+
+  <!-- ░░░ PROCESO ░░░ -->
+  <section class="process" id="proceso">
+    <div class="section-head">
+      <span class="section-head__num">03</span>
+      <h2 class="section-head__title">proceso</h2>
+      <p class="section-head__lead">Cuatro estaciones entre la primera charla y las llaves.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step reveal">
+        <span class="step__n">01</span>
+        <h3>escucha</h3>
+        <p>Entendemos el lugar, el presupuesto y la forma de vivir antes de dibujar una sola línea.</p>
+      </li>
+      <li class="step reveal" style="--d:1">
+        <span class="step__n">02</span>
+        <h3>idea</h3>
+        <p>Una decisión rectora que ordena todo el proyecto. Lo demás se desprende de ahí.</p>
+      </li>
+      <li class="step reveal" style="--d:2">
+        <span class="step__n">03</span>
+        <h3>proyecto</h3>
+        <p>Documentación, materiales y detalle. La obra resuelta en el papel antes que en el barro.</p>
+      </li>
+      <li class="step reveal" style="--d:3">
+        <span class="step__n">04</span>
+        <h3>obra</h3>
+        <p>Dirección y seguimiento. Estamos hasta que el espacio se habita.</p>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ░░░ CONTACTO ░░░ -->
+  <section class="contact" id="contacto">
+    <div class="contact__inner">
+      <h2 class="contact__title">hagamos<br /><em>un lugar.</em></h2>
+      <div class="contact__cols">
+        <form class="contact__form" id="contactForm" novalidate>
+          <label>Nombre<input type="text" name="nombre" required /></label>
+          <label>Email<input type="email" name="email" required /></label>
+          <label>Tu proyecto<textarea name="mensaje" rows="3" required></textarea></label>
+          <button type="submit">Enviar consulta</button>
+          <p class="form-note" id="formNote" hidden>Gracias. Te respondemos a la brevedad.</p>
+        </form>
+        <div class="contact__aside">
+          <p><span>Escribinos</span><a href="mailto:hola@cpm.com.ar">hola@cpm.com.ar</a></p>
+          <p><span>Instagram</span><a href="https://www.instagram.com/carmona.perezmarino/" target="_blank" rel="noopener">@carmona.perezmarino</a></p>
+          <p><span>Estudio</span>Buenos Aires, Argentina</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ░░░ FOOTER ░░░ -->
+  <footer class="site-footer">
+    <span class="site-footer__brand">carmona perez marino</span>
+    <span class="site-footer__legal">estudio de arquitectura · © 2026</span>
+    <a href="#inicio" class="site-footer__top">volver arriba ↑</a>
+  </footer>
+
+  <script src="js/works.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

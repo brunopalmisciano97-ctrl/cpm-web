@@ -133,7 +133,6 @@
     const obrasPage = document.getElementById("obras");
     const isObras = obrasPage.classList.contains("page--active");
 
-    // Solo aplicar efecto scroll si no estamos en Obras
     if (!isObras && window.scrollY > 50) {
       header.classList.add("scrolled");
     } else if (!isObras || window.scrollY <= 50) {
@@ -197,6 +196,18 @@
           "img/edificio-varese-ii/68.jpg", "img/edificio-varese-ii/70.jpg", "img/edificio-varese-ii/73.jpg", "img/edificio-varese-ii/75.jpg",
           "img/edificio-varese-ii/79.jpg"
         ]
+      },
+      {
+        name: "Obra Bunker",
+        cat: "obra nueva",
+        year: "2024",
+        description: "Obra de arquitectura contemporánea con características defensivas integradas al diseño.",
+        images: [
+          "img/obra-bunker/1.jpg", "img/obra-bunker/2.jpg", "img/obra-bunker/3.jpg", "img/obra-bunker/4.jpg",
+          "img/obra-bunker/5.jpg", "img/obra-bunker/6.jpg", "img/obra-bunker/7.jpg", "img/obra-bunker/8.jpg",
+          "img/obra-bunker/9.jpg", "img/obra-bunker/10.jpg", "img/obra-bunker/11.jpg", "img/obra-bunker/12.jpg",
+          "img/obra-bunker/13.jpg"
+        ]
       }
     ];
 
@@ -219,27 +230,93 @@
 
     detail.style.display = "block";
 
+    // Auto-scroll lento
+    let autoScrollInterval = null;
+    let isScrolling = false;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartScroll = 0;
+
+    function startAutoScroll() {
+      if (autoScrollInterval) clearInterval(autoScrollInterval);
+      autoScrollInterval = setInterval(() => {
+        if (!isScrolling && !isDragging && detail.classList.contains("visible")) {
+          detailSlider.scrollBy({ left: 2, behavior: "auto" });
+        }
+      }, 50);
+    }
+
+    function stopAutoScroll() {
+      if (autoScrollInterval) clearInterval(autoScrollInterval);
+    }
+
+    // Drag para scroll
+    detailSlider.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      dragStartX = e.pageX;
+      dragStartScroll = detailSlider.scrollLeft;
+      detailSlider.style.cursor = "grabbing";
+      stopAutoScroll();
+    });
+
+    document.addEventListener("mousemove", (e) => {
+      if (!isDragging || !detail.classList.contains("visible")) return;
+      const diff = e.pageX - dragStartX;
+      detailSlider.scrollLeft = dragStartScroll - diff;
+    });
+
+    document.addEventListener("mouseup", () => {
+      if (!isDragging) return;
+      isDragging = false;
+      detailSlider.style.cursor = "grab";
+      setTimeout(() => {
+        isScrolling = false;
+        startAutoScroll();
+      }, 200);
+    });
+
+    detailSlider.style.cursor = "grab";
+
     // Controles de scroll para el carrusel de detalle
     const detailScrollHandler = (e) => {
       if (!detail.classList.contains("visible")) return;
       e.preventDefault();
+      isScrolling = true;
       detailSlider.scrollBy({ left: e.deltaY * 0.8, behavior: "smooth" });
+      stopAutoScroll();
+      setTimeout(() => {
+        isScrolling = false;
+        startAutoScroll();
+      }, 800);
     };
 
     const detailKeyHandler = (e) => {
       if (!detail.classList.contains("visible")) return;
       if (e.key === "ArrowRight" || e.key === "ArrowDown") {
         e.preventDefault();
+        isScrolling = true;
         detailSlider.scrollBy({ left: 300, behavior: "smooth" });
+        stopAutoScroll();
+        setTimeout(() => {
+          isScrolling = false;
+          startAutoScroll();
+        }, 800);
       } else if (e.key === "ArrowLeft" || e.key === "ArrowUp") {
         e.preventDefault();
+        isScrolling = true;
         detailSlider.scrollBy({ left: -300, behavior: "smooth" });
+        stopAutoScroll();
+        setTimeout(() => {
+          isScrolling = false;
+          startAutoScroll();
+        }, 800);
       }
     };
 
     detail.classList.add("visible");
     window.addEventListener("wheel", detailScrollHandler, { passive: false });
     window.addEventListener("keydown", detailKeyHandler);
+    startAutoScroll();
 
     // Scroll suave hacia el detalle
     setTimeout(() => {
@@ -329,6 +406,71 @@
       }
     });
   });
+
+  /* ---- ESTUDIO CAROUSEL ---- */
+  const estudioCarousel = document.getElementById("estudioCarousel");
+
+  const ESTUDIO_IMAGES = [];
+  for (let i = 1; i <= 25; i++) {
+    ESTUDIO_IMAGES.push(`img/estudio/${i}.jpg`);
+  }
+
+  // Desordenar imágenes
+  for (let i = ESTUDIO_IMAGES.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [ESTUDIO_IMAGES[i], ESTUDIO_IMAGES[j]] = [ESTUDIO_IMAGES[j], ESTUDIO_IMAGES[i]];
+  }
+
+  // Generar imágenes en el carrusel
+  ESTUDIO_IMAGES.forEach((src) => {
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = "Estudio";
+    estudioCarousel.appendChild(img);
+  });
+
+  let estudioAutoScrollInterval = null;
+  let estudioIsDragging = false;
+  let estudioDragStartX = 0;
+  let estudioDragStartScroll = 0;
+
+  function startEstudioAutoScroll() {
+    if (estudioAutoScrollInterval) clearInterval(estudioAutoScrollInterval);
+    estudioAutoScrollInterval = setInterval(() => {
+      if (!estudioIsDragging) {
+        estudioCarousel.scrollBy({ left: 2, behavior: "auto" });
+      }
+    }, 50);
+  }
+
+  function stopEstudioAutoScroll() {
+    if (estudioAutoScrollInterval) clearInterval(estudioAutoScrollInterval);
+  }
+
+  // Drag para scroll en estudio
+  estudioCarousel.addEventListener("mousedown", (e) => {
+    estudioIsDragging = true;
+    estudioDragStartX = e.pageX;
+    estudioDragStartScroll = estudioCarousel.scrollLeft;
+    estudioCarousel.style.cursor = "grabbing";
+    stopEstudioAutoScroll();
+  });
+
+  document.addEventListener("mousemove", (e) => {
+    if (!estudioIsDragging) return;
+    const diff = e.pageX - estudioDragStartX;
+    estudioCarousel.scrollLeft = estudioDragStartScroll - diff;
+  });
+
+  document.addEventListener("mouseup", () => {
+    if (!estudioIsDragging) return;
+    estudioIsDragging = false;
+    estudioCarousel.style.cursor = "grab";
+    setTimeout(() => startEstudioAutoScroll(), 200);
+  });
+
+  estudioCarousel.style.cursor = "grab";
+  startEstudioAutoScroll();
 
   /* Init */
   typewriter();

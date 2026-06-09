@@ -193,6 +193,90 @@ html, body {
   max-width: 800px;
 }
 
+/* ---- ESTUDIO ---- */
+#estudio.page--active {
+  background: #fff;
+}
+
+.estudio-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: #fff;
+  padding-top: 100px;
+}
+
+.estudio-fixed {
+  flex: 0 0 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 48px;
+  position: relative;
+  padding-top: 24px;
+}
+
+.estudio-main-image {
+  width: 100%;
+  max-width: 680px;
+  height: 680px;
+  object-fit: contain;
+  margin-bottom: 8px;
+}
+
+.estudio-text {
+  width: 100%;
+  max-width: 680px;
+}
+
+.estudio-text h2 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: #000;
+  line-height: 1.1;
+}
+
+.estudio-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.estudio-carousel-container {
+  flex: 0 0 65%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 48px;
+  overflow: hidden;
+  padding-top: 24px;
+}
+
+.estudio-carousel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  gap: 0;
+}
+
+.estudio-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.estudio-carousel img {
+  flex: 0 0 auto;
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  cursor: grab;
+}
+
 .page-content a {
   color: #fff;
   text-decoration: none;
@@ -203,6 +287,45 @@ html, body {
 .page-content a:hover {
   color: #c8a96e;
   border-bottom-color: #c8a96e;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+  background: #fff;
+  padding: 24px;
+  text-align: center;
+  width: 100%;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-icon {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+  transition: all 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+}
+
+.footer-icon:hover {
+  color: #c8a96e;
+  border-color: #c8a96e;
+  transform: scale(1.1);
+}
+
+.footer-icon svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* ---- PROGRESS DOTS ---- */
@@ -269,7 +392,7 @@ html, body {
 .project-detail {
   width: 100%;
   min-height: 100vh;
-  padding: 100px 48px 48px;
+  padding: 100px 48px 100px;
   background: #fff;
   position: relative;
 }
@@ -347,11 +470,10 @@ html, body {
 }
 
 .detail-image {
-  flex: 0 0 100%;
-  min-width: 100%;
-  width: 100%;
+  flex: 0 0 auto;
+  width: auto;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   margin: 0;
   padding: 0;

@@ -1,85 +1,71 @@
-/* Proyectos reales — fotos de @carmona.perezmarino
-   cat: obra-nueva | remodelacion | interiorismo
-   size: "" | "wide" | "tall"                      */
 const WORKS = [
   {
-    name: "Varese 2",
+    name: "Casa Bosque",
     year: "2024",
-    area: "—",
-    cat: "obra-nueva",
-    size: "wide",
-    img: "img/obra-varese2.jpg"
+    cat: "obra nueva",
+    description: "Proyecto de vivienda unifamiliar en contexto de bosque.",
+    images: [
+      "img/casa-bosque/3.jpg",
+      "img/casa-bosque/15.jpg",
+      "img/casa-bosque/24.jpg",
+      "img/casa-bosque/33.jpg",
+      "img/casa-bosque/40.jpg",
+      "img/casa-bosque/48.jpg",
+      "img/casa-bosque/53.jpg",
+      "img/casa-bosque/58.jpg",
+      "img/casa-bosque/72.jpg",
+      "img/casa-bosque/81.jpg",
+      "img/casa-bosque/93.jpg",
+      "img/casa-bosque/104.jpg",
+      "img/casa-bosque/114.jpg",
+      "img/casa-bosque/135.jpg",
+      "img/casa-bosque/154.jpg"
+    ]
   },
   {
-    name: "Casa Vidrio",
+    name: "Casa San Benito",
     year: "2023",
-    area: "—",
-    cat: "obra-nueva",
-    size: "tall",
-    img: "img/obra-casavidrio-noche.jpg"
+    cat: "remodelación",
+    description: "Remodelación integral de vivienda histórica.",
+    images: [
+      "img/casa-san-benito/3.jpg",
+      "img/casa-san-benito/9.jpg",
+      "img/casa-san-benito/11.jpg",
+      "img/casa-san-benito/13.jpg",
+      "img/casa-san-benito/16.jpg",
+      "img/casa-san-benito/30.jpg",
+      "img/casa-san-benito/33.jpg",
+      "img/casa-san-benito/43.jpg",
+      "img/casa-san-benito/52.jpg",
+      "img/casa-san-benito/61.jpg",
+      "img/casa-san-benito/75.jpg",
+      "img/casa-san-benito/84.jpg",
+      "img/casa-san-benito/97.jpg",
+      "img/casa-san-benito/112.jpg",
+      "img/casa-san-benito/133.jpg"
+    ]
   },
   {
-    name: "Rediseño Oficinas",
-    year: "2023",
-    area: "—",
-    cat: "remodelacion",
-    size: "",
-    img: "img/remo-oficinas.jpg"
-  },
-  {
-    name: "Estudio CPM",
+    name: "Edificio Varese II",
     year: "2024",
-    area: "—",
-    cat: "interiorismo",
-    size: "",
-    img: "img/int-estudio.jpg"
-  },
-  {
-    name: "Casa Cuatro Vientos",
-    year: "2022",
-    area: "—",
-    cat: "obra-nueva",
-    size: "",
-    img: "img/obra-cuatrovientos.jpg"
-  },
-  {
-    name: "Casa Vidrio — deck",
-    year: "2023",
-    area: "—",
-    cat: "obra-nueva",
-    size: "",
-    img: "img/obra-casavidrio-deck.jpg"
-  },
-  {
-    name: "Break Café",
-    year: "2022",
-    area: "—",
-    cat: "remodelacion",
-    size: "tall",
-    img: "img/remo-break.jpg"
-  },
-  {
-    name: "Casa — ventana nocturna",
-    year: "2023",
-    area: "—",
-    cat: "obra-nueva",
-    size: "tall",
-    img: "img/obra-ventana-noche.jpg"
-  },
-  {
-    name: "Interior — galería",
-    year: "2022",
-    area: "—",
-    cat: "interiorismo",
-    size: "",
-    img: "img/int-galeria.jpg"
-  },
-  {
-    name: "Estudio CPM — luz",
-    year: "2024",
-    area: "—",
-    cat: "interiorismo",
-    size: "wide",
-    img: "img/int-corredor.jpg"
-  },
+    cat: "obra nueva",
+    description: "Edificio residencial de viviendas múltiples.",
+    images: [
+      "img/edificio-varese-ii/1.jpg",
+      "img/edificio-varese-ii/12.jpg",
+      "img/edificio-varese-ii/25.jpg",
+      "img/edificio-varese-ii/40.jpg",
+      "img/edificio-varese-ii/55.jpg",
+      "img/edificio-varese-ii/70.jpg",
+      "img/edificio-varese-ii/85.jpg",
+      "img/edificio-varese-ii/95.jpg",
+      "img/edificio-varese-ii/105.jpg",
+      "img/edificio-varese-ii/115.jpg",
+      "img/edificio-varese-ii/125.jpg",
+      "img/edificio-varese-ii/135.jpg",
+      "img/edificio-varese-ii/145.jpg",
+      "img/edificio-varese-ii/150.jpg",
+      "img/edificio-varese-ii/156.jpg"
+    ]
+  }
 ];
